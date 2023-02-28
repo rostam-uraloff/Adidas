@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="header__nav">
+            <div class="container header-navbar">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+
+                <ul class="header__navbar-menu">
+                    <li><a href="#!" class="header__navbar-link">MEN</a></li>
+                    <li><a href="#!" class="header__navbar-link">WOMEN</a></li>
+                    <li><a href="#!" class="header__navbar-link">KIDS</a></li>
+                </ul>
+
+                <form action="" class="header__navbar-form">
+                    <input type="search" class="header__navbar-search" placeholder="Поиск">
+                    <!-- вручную ввели placeholder со словом поиск -->
+                    <button class="header__navbar-btn">Искать</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="header-content">
+            <img src="images/header_logo.png" alt="header logo" class="header__img">
+            <h1 class="header__title">TRAINING</h1>
+            <p class="header__desc">My life is beautiful</p>
+        </div>
+    </header>
+
+
+
+    <main class="main">
+        <section class="main__cards">
+            <a href="#!" class="main__card">
+                <!-- вместо дивов используем тег а, что делает весь блок спрошлой ссылкой. при наведении на любую часть блока идет переход по ссылке. стилевые свойства задаются по имени класса -->
+                <img src="images/header_snikers.png" alt="snikers" class="main__img-card">
+                <span class="main__card-text">Sneakers</span>
+            </a>
+
+            <a href="#!" class="main__card">
+                <img src="images/header_shorts.png" alt="shorts" class="main__img-card">
+                <span class="main__card-text">shorts</span>
+            </a>
+
+            <a href="#!" class="main__card">
+                <img src="images/header_t-shirts.png" alt="t-shirts" class="main__img-card">
+                <span class="main__card-text">t-shirts</span>
+            </a>
+
+            <a href="#!" class="main__card">
+                <img src="images/header_portfolios.png" alt="portfolios" class="main__img-card">
+                <span class="main__card-text">portfolios</span>
+            </a>
+            <!-- чтобы поставить блоки card в горизонтальное положение, в CSS обращаемся к родителю card - cards - задаем card display:flex -->
+        </section>
+
+
+        <section class="main__gear">
+            <div class="container">
+                <h2 class="main__gear-title">ADIDAS WOMEN’S TIRO GEAR</h2>
+                <p class="main__gear-desc">With women’s adidas Tiro tracksuits, comfort and sleek style go hand-in-hand.
+                    Streamlined essentials that started out as warmups have transcended the sports world to strut their
+                    stuff throughout the city. Your busy schedule keeps you on the move and Tiro gear is made to keep
+                    up. From everyday must-haves like track jackets and hoodies to workout-ready tops and shorts, you’ll
+                    have everything you need to take on your day with confidence. Soft breathable fabric is flexible for
+                    any activity, with a modern athletic look that always turns heads. On a hot day or at the gym,
+                    AEROREADY technology wicks sweat to keep you dry and comfortable.
+                </p>
+                <p class="main__gear-desc">With a variety of colors in sizes made for all bodies, you can create an
+                    outfit that goes with anything and everything in your closet while delivering all-day comfort.
+                    Women’s Tiro pants and joggers have a tapered design that really lets you show off your sneaker
+                    heat. Keep things low-key and subtle with neutral black and white colorways or highlight your bold
+                    fashion sense in reds, greens and pinks. Tiro Pride styles make a clear statement with vibrant,
+                    colorful accents. Find women’s Tiro tracksuits, hoodies, and more that fit your lifestyle at adidas.
+                </p>
+                <!-- p.main__gear-desc*2 - создает 2 элемента -->
+            </div>
+            <img src="images/main_bg.png" alt="gear image" class="main__gear-img">
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="main__categories-title">OUR CLOTHING AND SHOE CATEGORIES</h2>
+                <div class="main__categories-list">
+                    <ul>
+                        <li><a href="#!" class="main__categories-link">Beige Sneakers</a></li>
+                        <li><a href="#!" class="main__categories-link">Black Shoes</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!" class="main__categories-link">Beige Sneakers</a></li>
+                        <li><a href="#!" class="main__categories-link">Black Shoes</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!" class="main__categories-link">Beige Sneakers</a></li>
+                        <li><a href="#!" class="main__categories-link">Black Shoes</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!" class="main__categories-link">Beige Sneakers</a></li>
+                        <li><a href="#!" class="main__categories-link">Black Shoes</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!" class="main__categories-link">Beige Sneakers</a></li>
+                        <li><a href="#!" class="main__categories-link">Black Shoes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <img src="images/footer_logo.png" alt="footer logo" class="footer_logo">
+        <ul class="footer__links">
+            <li><a href="#!" class="footer__link">MEN</a></li>
+            <li><a href="#!" class="footer__link">WOMEN</a></li>
+            <li><a href="#!" class="footer__link">KIDS</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

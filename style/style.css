@@ -1,0 +1,271 @@
+@import url(../style/fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+/* HEADER START */
+.header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__navbar-menu {
+    display: flex;
+    column-gap: 30px;
+    /* column gap работает только по горизонтали, в то время как gap работает на 4 стороны */
+}
+
+.header__navbar-link {
+    display: inline-block;
+    color: #000000;
+    line-height: 19px;
+    font-size: 16px;
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    /* сделали бордер прозрачным, для того чтобы при наведении бордер не дергался. по умолчанию бордер есть но он прозрачен при ховере бордер есть и он черный. эффекта дерганья не будет */
+    padding-top: 31px;
+    padding-bottom: 26px;
+    transition: 0.8s;
+}
+
+.header__navbar-link:hover {
+    border-color: #000000;
+    /* задали черный цвет бордерам при наведении */
+}
+
+.header__navbar-form {
+    display: flex;
+}
+
+.header__navbar-search {
+    outline: none;
+    /* отключили режим outline - эффект ховер при наведении */
+    border-radius: 10px 0px 0px 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    padding: 8px 12px;
+    /* отступы внутри поисковой строки */
+    /* задаем стилевые свойства вводимому тексту */
+    color: #000000;
+    line-height: 14px;
+    font-size: 12px;
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+}
+
+.header__navbar-search::placeholder {
+    color: #000000;
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    /* задали стилевые свойства слову поиск - placeholder */
+}
+
+.header__navbar-btn {
+    border: none;
+    /* отключили бордер */
+    background: #000000;
+    border-radius: 0px 10px 10px 0px;
+    padding: 0 16px;
+    /* отступы кнопки - верхние отступы 0 потому что в input они уже заданы. */
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.header-content {
+    background: url(../images/header_bg.png) no-repeat top /cover;
+    /* задан бэкграунд. no-repeat - не повторять. top - показывает верхнюю часть. /cover - на весь экран*/
+    height: 100vh;
+    /* без заданной высоты бэкграунд не может разместиться на весь экран */
+    /* vh - view height - видимая область экрана. высота на весь экран, адаптивная под другие мониторы */
+    background-attachment: fixed;
+    /* определяет позицию бэкграунда - "липкий бэкграунд" при скроллинге бэкграунд двигаться не будет */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font-family: 'Rubik-SemiBold';
+    font-weight: 600;
+    font-size: 59px;
+    line-height: 70px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.header__desc {
+    font-family: 'Rubik-Light';
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 31px;
+    text-transform: uppercase;
+    /* делает все буквы заглавными */
+    color: #FFFFFF;
+}
+
+/* HEADER END */
+
+/* MAIN START */
+.main__card {
+    /* сначала задаем параметры и стилевые свойства одному блоку, далее дублируем его */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    /* разделили на 4 части. каждый блок = 25% */
+    background: #181D28;
+    padding: 20px 0;
+    /* задали отступы блоку */
+    transition: 0.8s;
+    /* замедление ховера. задается не в ховер */
+}
+
+.main__card-text {
+    display: inline-block;
+    /* тег span - строчный. чтобы он корректно работал и можно было задавать ему отступы, делаем его строчно-блочным */
+    font-family: 'Rubik-SemiBold';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-top: 24px;
+}
+
+.main__cards {
+    display: flex;
+    /* включили режим флекс, чтобы сделать 4 блока card в горизонтальное положение */
+}
+
+.main__card:hover {
+    background: #6B4B6B;
+}
+
+.main__gear {
+    padding: 40px 0;
+    /* задали отступы блоку main__gear сверху и снизу */
+}
+
+.main__gear-title {
+    font-family: 'Rubik-SemiBold';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main__gear-desc {
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+
+
+}
+
+.main__gear-desc:nth-of-type(1) {
+    /* псевдокласс :nth-of-type позволяет обращаться к одному элементу из многих, которые имеют один класс и задавать исключительно ему стилевые свойства  */
+    margin-bottom: 18px;
+}
+
+.main__gear-img {
+    width: 100%;
+    /* чтобы картинка не выходила за рамки контента и не увеличивала мастшаб сайта - чтобы нижний скрол не крутился */
+    margin-top: 40px;
+}
+
+.main__categories-title {
+    font-family: 'Rubik-SemiBold';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main__categories-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__categories-link {
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    display: block;
+    /* включили режим блок, сделав элемент блочным, чтобы задать ему отступы margin */
+    margin: 14px 0 0 0;
+}
+
+.footer {
+    margin-top: 40px;
+    background: #181D28;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_logo {
+    margin-left: 35px;
+    padding: 35px 0;
+}
+
+.footer__links {
+    display: flex;
+    column-gap: 30px;
+    margin-right: 35px;
+}
+
+.footer__link {
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    transition: 0.8s;
+
+}
+.footer__link:hover {
+    border-color: #FFFFFF;
+}
+    
+/* MAIN END */
